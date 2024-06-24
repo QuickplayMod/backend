@@ -1,0 +1,27 @@
+{
+  "name": "quickplay-backend",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuickplayMod/backend.git"
+  },
+  "bugs": "https://github.com/QuickplayMod/backend/issues",
+  "homepage": "https://quickplay.ecr.dev/",
+  "author": {
+    "name": "Erik Roberts",
+    "url": "https://ecr.dev/"
+  },
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "dev:serverless": "wrangler dev src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.4.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240620.0",
+    "@types/bun": "latest",
+    "wrangler": "^3.61.0"
+  }
+}

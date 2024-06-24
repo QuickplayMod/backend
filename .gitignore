@@ -4,3 +4,10 @@ node_modules/
 
 # workspaces
 .idea
+
+# build
+dist
+
+# environment
+.env*
+!.env.sample

@@ -1,6 +1,7 @@
 {
   "name": "quickplay-backend",
   "version": "1.0.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/QuickplayMod/backend.git"
@@ -13,15 +14,27 @@
   },
   "license": "GPL-3.0-only",
   "scripts": {
-    "dev": "bun run --hot src/index.ts",
-    "dev:serverless": "wrangler dev src/index.ts"
+    "dev:bun": "bunx --bun vite --mode=bun",
+    "build:bun": "bunx --bun vite build --mode=bun",
+    "preview:bun": "bun dist/bun/server.js",
+    "dev:pages": "bunx --bun vite --mode=pages",
+    "build:pages": "bunx --bun vite build --mode=pages",
+    "preview:pages": "wrangler pages dev",
+    "deploy:pages": "bun run build && wrangler pages deploy"
   },
   "dependencies": {
     "hono": "^4.4.7"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240620.0",
+    "@hono/vite-cloudflare-pages": "^0.4.1",
+    "@hono/vite-dev-server": "^0.12.2",
     "@types/bun": "latest",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "sass": "^1.77.6",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1",
     "wrangler": "^3.61.0"
   }
 }

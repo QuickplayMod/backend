@@ -40,8 +40,8 @@ app.get('/', (c) => {
     )
 })
 
-const host = import.meta.env.HOST || "localhost"
-const port = import.meta.env.PORT || 3000
+const host = import.meta.env.VITE_HOST || "localhost"
+const port = import.meta.env.VITE_PORT || 3000
 if(import.meta.env.MODE === "bun") {
     console.log(`> Listening on port http://${host}:${port}`)
 }

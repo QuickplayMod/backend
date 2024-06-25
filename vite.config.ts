@@ -6,6 +6,10 @@ import { defineConfig } from 'vite'
 export default defineConfig((config) => {
     if(config.mode === "pages") {
         return {
+            server: {
+                host: import.meta.env.VITE_HOST ?? "localhost",
+                port: parseInt(import.meta.env.VITE_PORT ?? "3000")
+            },
             plugins: [
                 build({
                     outputDir: 'dist/pages'
@@ -20,6 +24,10 @@ export default defineConfig((config) => {
 
     if(config.mode === "bun") {
         return {
+            server: {
+                host: import.meta.env.VITE_HOST ?? "localhost",
+                port: parseInt(import.meta.env.VITE_PORT ?? "3000")
+            },
             build: {
                 ssr: true,
                 minify: false,

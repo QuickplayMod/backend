@@ -14,11 +14,11 @@
   },
   "license": "GPL-3.0-only",
   "scripts": {
-    "dev:bun": "bunx --bun vite --mode=bun",
-    "build:bun": "bunx --bun vite build --mode=bun",
+    "dev:bun": "bunx --bun vite --mode=bun-development",
+    "build:bun": "bunx --bun vite build --mode=bun-production",
     "preview:bun": "bun dist/bun/server.js",
-    "dev:pages": "bunx --bun vite --mode=pages",
-    "build:pages": "bunx --bun vite build --mode=pages",
+    "dev:pages": "bunx --bun vite --mode=pages-development",
+    "build:pages": "bunx --bun vite build --mode=pages-production",
     "preview:pages": "wrangler pages dev",
     "deploy:pages": "bun run build && wrangler pages deploy"
   },

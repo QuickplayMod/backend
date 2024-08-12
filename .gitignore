@@ -9,5 +9,5 @@ node_modules/
 dist
 
 # environment
-.env*
-!.env.sample
+.env*.local
+!.env.local.sample

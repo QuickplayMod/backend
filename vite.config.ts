@@ -4,7 +4,7 @@ import adapter from '@hono/vite-dev-server/cloudflare'
 import { defineConfig } from 'vite'
 
 export default defineConfig((config) => {
-    if(config.mode === "pages") {
+    if(config.mode.includes("pages")) {
         return {
             server: {
                 host: import.meta.env.VITE_HOST ?? "localhost",
@@ -22,7 +22,7 @@ export default defineConfig((config) => {
         }
     }
 
-    if(config.mode === "bun") {
+    if(config.mode.includes("bun")) {
         return {
             server: {
                 host: import.meta.env.VITE_HOST ?? "localhost",

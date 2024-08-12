@@ -59,20 +59,25 @@ async function serveStaticFiles() {
 
 const app = new Hono()
 
-const runningInCloudflarePages = import.meta.env.MODE === "pages";
+const runningInCloudflarePages = import.meta.env.MODE?.includes("pages");
 if(!runningInCloudflarePages) {
     await serveStaticFiles()
-    await polyfillCompressionStream()
+    // Compression polyfill doesn't seem to work when running dev:bun -- results in browser error.
+    if(import.meta.env.PROD) {
+        await polyfillCompressionStream()
+    }
 }
 
-app.use(compress())
+if(import.meta.env.PROD) {
+    app.use(compress())
+}
 
 app.route('/', ui)
 app.route('/api/v1', api)
 
 const host = import.meta.env.VITE_HOST || "localhost"
 const port = import.meta.env.VITE_PORT || 3000
-if(import.meta.env.MODE === "bun") {
+if(import.meta.env.MODE?.includes("bun")) {
     console.log(`> Listening on port http://${host}:${port}`)
 }
 

@@ -24,7 +24,19 @@ app.use(async (c, next) => {
                     <link rel="manifest" href="/static/manifest.json"/>
                     <link rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                    <meta name="description" content="A Minecraft mod for quickly navigating the Hypixel Network via buttons and key presses" />
+                    <meta name="description"
+                          content="A Minecraft mod for quickly navigating the Hypixel Network via buttons and key presses"/>
+                    <meta name="og:title"
+                          content={title}/>
+                    <meta name="og:description"
+                          content="A Minecraft mod for quickly navigating the Hypixel Network via buttons and key presses"/>
+                    <meta property="og:image" content="/static/images/social-logo.png"/>
+                    <meta name="twitter:card" content="summary" />
+                    <meta name="twitter:title"
+                          content={title}/>
+                    <meta name="twitter:description"
+                          content="A Minecraft mod for quickly navigating the Hypixel Network via buttons and key presses"/>
+                    <meta property="twitter:image" content="/static/images/social-logo.png"/>
                     <style>{tailwindCss}</style>
                     <style>{indexCss}</style>
                 </head>

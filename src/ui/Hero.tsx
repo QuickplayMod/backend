@@ -12,10 +12,8 @@ export function Hero() {
                 </p>
 
                 <div class="flex justify-center">
-                    <a href="#downloads" onclick="scrollToDownloads(event)">
-                        <button class="p-5 pl-16 pr-16 bg-teal-600 rounded-md m-2 text-3xl">
-                            Download
-                        </button>
+                    <a href="#downloads" onclick="scrollToDownloads(event)" class="p-5 pl-16 pr-16 bg-teal-600 rounded-md m-2 text-3xl button-link">
+                        Download
                     </a>
                 </div>
 
@@ -30,15 +28,11 @@ export function Hero() {
 
 
                 <div class="flex justify-center mt-5">
-                    <a href="https://discord.gg/AWThmaVJJv">
-                        <button class="p-3 px-5 bg-[#5865F2] rounded-md m-2 text-xl">
-                            Discord
-                        </button>
+                    <a href="https://discord.gg/AWThmaVJJv" class="p-3 px-5 bg-[#5865F2] rounded-md m-2 text-xl button-link">
+                        Discord
                     </a>
-                    <a href="https://github.com/quickplaymod">
-                        <button class="p-3 px-5 bg-[#2B3137] rounded-md m-2 text-xl">
-                            GitHub
-                        </button>
+                    <a href="https://github.com/quickplaymod" class="p-3 px-5 bg-[#2B3137] rounded-md m-2 text-xl button-link">
+                        GitHub
                     </a>
                 </div>
             </div>

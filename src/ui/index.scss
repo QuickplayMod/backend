@@ -64,8 +64,12 @@
   font-style: italic;
 }
 
-h1, h2, h3, h4, h5, h6, button, .qp-header-image {
+h1, h2, h3, h4, h5, h6, button, .qp-header-image, .button-link {
   font-family: Righteous, sans-serif;
+}
+
+.button-link {
+  text-align: center;
 }
 
 // Fallback text styling to closely match the Quickplay logo before the logo loads, and/or if logo loading fails.

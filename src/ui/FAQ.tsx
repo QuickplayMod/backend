@@ -1,6 +1,6 @@
 export function FAQ() {
     return (
-        <div>
+        <div id="faq">
             <h2 aria-label="Frequently Asked Questions" class="text-white text-5xl mb-7">FAQ</h2>
 
             <h3 class="text-white text-xl">How does Quickplay work?</h3>

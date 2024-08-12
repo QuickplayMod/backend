@@ -68,6 +68,19 @@ h1, h2, h3, h4, h5, h6, button, .qp-header-image {
   font-family: Righteous, sans-serif;
 }
 
+// Fallback text styling to closely match the Quickplay logo before the logo loads, and/or if logo loading fails.
+.qp-header-image {
+  font-size: min(11vw, 9rem);
+  line-height: 1.28;
+  background: linear-gradient(90deg, #16aba1, #43cdab);
+  background-clip: text;
+  color: transparent;
+}
+
 p {
   font-family: Merriweather, serif;
+}
+
+button {
+  cursor: pointer;
 }

@@ -3,6 +3,10 @@ import tailwindCss from "./tailwind.scss?inline"
 import indexCss from "./index.scss?inline"
 import {routeNames} from "./routeNames.js";
 import {Hero} from "./Hero.js";
+import {Features} from "./Features.js";
+import {Download} from "./Download.js";
+import {FAQ} from "./FAQ.js";
+import {Footer} from "./Footer.js";
 
 const app = new Hono()
 
@@ -19,6 +23,7 @@ app.use(async (c, next) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <style>{tailwindCss}</style>
                 <style>{indexCss}</style>
+                <script src="/static/functions.js" />
             </head>
             <body>
             {content}
@@ -34,6 +39,15 @@ app.get('/', (c) => {
     return c.render(
         <div>
             <Hero />
+            <div class="min-h-[30vh] bg-neutral-900 p-3 px-[5vw] sm:p-10">
+                <div class="max-w-[90vw] sm:max-w-[min(60vw,2000px)] m-auto">
+                    <Features />
+                    <Download />
+                    <hr class="m-10 border-neutral-700" />
+                    <FAQ />
+                </div>
+            </div>
+            <Footer />
         </div>
     )
 })

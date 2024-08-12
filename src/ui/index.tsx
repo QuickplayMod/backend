@@ -7,6 +7,7 @@ import {Features} from "./Features.js";
 import {Download} from "./Download.js";
 import {FAQ} from "./FAQ.js";
 import {Footer} from "./Footer.js";
+import {html} from 'hono/html'
 
 const app = new Hono()
 
@@ -15,20 +16,23 @@ app.use(async (c, next) => {
         const routeName = routeNames.get(c.req.path);
         const title = routeName ? `${routeName} | Quickplay` : 'Quickplay';
         return c.html(
-            <html lang="en">
-            <head>
-                <title>{title}</title>
-                <link rel="manifest" href="/static/manifest.json"/>
-                <link rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <style>{tailwindCss}</style>
-                <style>{indexCss}</style>
-                <script src="/static/functions.js" />
-            </head>
-            <body>
-            {content}
-            </body>
-            </html>
+            <>
+                {html`<!DOCTYPE html>`}
+                <html lang="en">
+                <head>
+                    <title>{title}</title>
+                    <link rel="manifest" href="/static/manifest.json"/>
+                    <link rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                    <style>{tailwindCss}</style>
+                    <style>{indexCss}</style>
+                    <script src="/static/functions.js" />
+                </head>
+                <body>
+                {content}
+                </body>
+                </html>
+            </>
         );
     })
     await next();

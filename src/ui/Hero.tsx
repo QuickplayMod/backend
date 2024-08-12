@@ -13,7 +13,7 @@ export function Hero() {
 
                 <div class="flex justify-center">
                     <a href="#downloads" onclick="scrollToDownloads(event)">
-                        <button class="p-5 pl-16 pr-16 bg-teal-500 rounded-md m-2 text-3xl">
+                        <button class="p-5 pl-16 pr-16 bg-teal-600 rounded-md m-2 text-3xl">
                             Download
                         </button>
                     </a>

@@ -19,12 +19,25 @@ export function Hero() {
                     }
                 </script>
             `}
-            <div style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/static/hero.png')"
+            <div style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/static/images/hero-bg/hero-bg.png');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image-set(
+                  url('/static/images/hero-bg/hero-bg.avif') type('image/avif'),
+                  url('/static/images/hero-bg/hero-bg.webp') type('image/webp'),
+                  url('/static/images/hero-bg/hero-bg.png') type('image/png')
+             )"
                  class="pb-20 min-h-[70vh] w-full bg-no-repeat bg-cover bg-center flex justify-center border-teal-500 border-b-[35px]">
                 <div class="container md:p-10 pt-10 text-white">
                     <div class="qp-header-image ml-auto mr-auto w-3/4 max-w-screen-md text-center">
-                        <img src="/static/logo-nomargin.png" alt="Quickplay"
-                             onError="this.parentElement.innerHTML = 'Quickplay'"/>
+                        <picture>
+                            <source media="(max-width: 699px)" srcset="/static/images/logo-nomargin/logo-nomargin-small.avif" type="image/avif" width="613" height="150" />
+                            <source media="(min-width: 700px)" srcset="/static/images/logo-nomargin/logo-nomargin-med.avif" type="image/avif" width="1534" height="375" />
+                            <source media="(max-width: 699px)" srcset="/static/images/logo-nomargin/logo-nomargin-small.webp" type="image/webp" width="613" height="150" />
+                            <source media="(min-width: 700px)" srcset="/static/images/logo-nomargin/logo-nomargin-med.webp" type="image/webp" width="1534" height="375" />
+                            <source media="(max-width: 699px)" srcset="/static/images/logo-nomargin/logo-nomargin-small.png" width="613" height="150" />
+                            <source media="(min-width: 700px)" srcset="/static/images/logo-nomargin/logo-nomargin-med.png" width="1534" height="375" />
+                            <img src="/static/images/logo-nomargin/logo-nomargin-med.png" alt="Quickplay"
+                                 onError="this.parentElement.innerHTML = 'Quickplay'" width="1534" height="375" />
+                        </picture>
                     </div>
                     <p class="p-2 text-2xl text-center" style="font-family: Merriweather">
                         Hypixel Navigation for Champions

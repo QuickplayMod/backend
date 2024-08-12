@@ -20,17 +20,17 @@ export function Download() {
             <div id="downloads">
                 <h2 class="text-white text-6xl sm:text-7xl mb-7 text-center">Download</h2>
                 <div class="grid grid-cols-2 max-w-[600px] m-auto">
-                    <a class="p-3 bg-teal-700 rounded-md m-2 text-xl text-white button-link">1.8.9 Forge
+                    <a href="https://modrinth.com/project/quick" class="p-3 bg-teal-700 rounded-md m-2 text-xl text-white button-link">1.8.9 Forge
                     </a>
-                    <a class="p-3 bg-teal-700 rounded-md m-2 text-xl text-white button-link">1.21 Fabric
+                    <a href="https://modrinth.com/project/quick" class="p-3 bg-teal-700 rounded-md m-2 text-xl text-white button-link">1.21 Fabric
                     </a>
 
-                    <a
+                    <a href="#"
                         class="p-3 bg-teal-700 rounded-md m-2 text-xl text-white additional-dl-option button-link"
                         style="display: none">
                         1.8.9 Forge (Direct)
                     </a>
-                    <a
+                    <a href="#"
                         class="p-3 bg-teal-700 rounded-md m-2 text-xl text-white additional-dl-option button-link"
                         style="display: none">
                         1.21 Fabric (Direct)

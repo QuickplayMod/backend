@@ -24,6 +24,7 @@ app.use(async (c, next) => {
                     <link rel="manifest" href="/static/manifest.json"/>
                     <link rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                    <meta name="description" content="A Minecraft mod for quickly navigating the Hypixel Network via buttons and key presses" />
                     <style>{tailwindCss}</style>
                     <style>{indexCss}</style>
                 </head>

@@ -15,7 +15,7 @@ app.use(async (c, next) => {
         const routeName = routeNames.get(c.req.path);
         const title = routeName ? `${routeName} | Quickplay` : 'Quickplay';
         return c.html(
-            <html>
+            <html lang="en">
             <head>
                 <title>{title}</title>
                 <link rel="manifest" href="/static/manifest.json"/>

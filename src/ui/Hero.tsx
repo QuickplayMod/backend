@@ -72,7 +72,7 @@ export function Hero() {
                             nextDescription.style.transform = "initial"
                             nextDescription.style.opacity = "1"
 
-                            if (window.innerWidth <= 640) {
+                            if (window.innerWidth >= 640) {
                                 translateDescriptionX();
                             }
 

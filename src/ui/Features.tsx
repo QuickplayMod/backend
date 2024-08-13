@@ -1,6 +1,7 @@
 export function Features() {
     return (
         <div>
+            <h2 class="sr-only">Features</h2>
             <div class="xl:text-center">
                 <h3 class="text-white text-5xl mb-5">Navigation Interface</h3>
                 <p class="text-white mb-5 xl:w-[500px] inline-block">Navigate the Hypixel Network quickly through an
@@ -11,10 +12,11 @@ export function Features() {
                 Placeholder for preview
             </div>
 
-            <hr class="m-10 border-neutral-700"/>
+            <hr class="m-10 border-neutral-700" aria-hidden="true" />
 
             <div class="xl:text-center">
-                <h3 class="text-white text-5xl mb-5">Keybind Integration</h3>
+                <h3 class="sr-only">Key Bind Integration</h3>
+                <h3 class="text-white text-5xl mb-5" aria-hidden="true">Keybind Integration</h3>
                 <p class="text-white mb-5 xl:w-[500px] inline-block">Assign your favorite Hypixel game modes to
                     keybinds,
                     allowing you to jump into a new game as soon as you log on or your previous game is complete.</p>
@@ -23,7 +25,7 @@ export function Features() {
                 Placeholder for preview
             </div>
 
-            <hr class="m-10 border-neutral-700"/>
+            <hr class="m-10 border-neutral-700" aria-hidden="true" />
 
             <div class="xl:text-center">
                 <h3 class="text-white text-5xl mb-5">In-Game Daily Rewards</h3>

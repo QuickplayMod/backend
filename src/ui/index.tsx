@@ -54,16 +54,22 @@ routeNames.set('/', 'Home')
 app.get('/', (c) => {
     return c.render(
         <div>
-            <Hero />
-            <div class="min-h-[30vh] bg-neutral-900 p-3 px-[5vw] sm:p-10">
-                <div class="max-w-[90vw] sm:max-w-[min(60vw,2000px)] m-auto">
-                    <Features />
-                    <Download />
-                    <hr class="m-10 border-neutral-700" />
-                    <FAQ />
+            <header>
+                <Hero />
+            </header>
+            <main>
+                <div class="min-h-[30vh] bg-neutral-900 p-3 px-[5vw] sm:p-10">
+                    <div class="max-w-[90vw] sm:max-w-[min(60vw,2000px)] m-auto">
+                        <Features/>
+                        <Download/>
+                        <hr class="m-10 border-neutral-700" aria-hidden="true"/>
+                        <FAQ/>
+                    </div>
                 </div>
-            </div>
-            <Footer />
+            </main>
+            <footer>
+                <Footer/>
+            </footer>
         </div>
     )
 })

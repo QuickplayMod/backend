@@ -1,7 +1,8 @@
 export function FAQ() {
     return (
         <div id="faq">
-            <h2 aria-label="Frequently Asked Questions" class="text-white text-5xl mb-7">FAQ</h2>
+            <h2 class="sr-only">Frequently Asked Questions</h2>
+            <h2 class="text-white text-5xl mb-7" aria-hidden="true">FAQ</h2>
 
             <h3 class="text-white text-xl">How does Quickplay work?</h3>
             <p class="text-white mb-7">Quickplay uses the /play and /warp commands to help you travel around the

@@ -1,4 +1,5 @@
 import {html} from "hono/html";
+import {ScrollingDescription} from "./ScrollingDescription.js";
 
 export function Hero() {
     return (
@@ -17,121 +18,6 @@ export function Hero() {
                         })
                         downloadsElem.querySelector('a').focus({preventScroll: true})
                     }
-
-                    function initDescriptionAnimation() {
-                        const descriptions = [
-                            "Experts",
-                            "Gamers",
-                            "Noobs",
-                            "Try-hards",
-                            "Professionals",
-                            "Achievers",
-                            "Champions",
-                            "Sweats",
-                            "Builders",
-                            "Grinders"
-                        ]
-                        let currentDescriptionIdx = 0;
-
-                        const descriptionLine = document.getElementById("hero-description-line");
-                        const descriptionText = descriptionLine.querySelector("span")
-                        const description = document.getElementById("hero-description-word")
-                        const nextDescription = document.getElementById("hero-description-next-word")
-
-
-                        function calibrateDescriptionOffset() {
-                            descriptionLine.style.textAlign = "center";
-                            descriptionText.style.left = "0";
-                            const textOffset = descriptionText.offsetLeft - descriptionLine.offsetLeft;
-                            descriptionLine.style.textAlign = "";
-                            descriptionText.style.left = textOffset + "px";
-                        }
-
-                        function finishDescriptionAnimation(value) {
-                            description.style.transitionDuration = "0s"
-                            nextDescription.style.transitionDuration = "0s"
-
-                            description.style.transform = ""
-                            description.style.opacity = ""
-                            nextDescription.style.transform = ""
-                            nextDescription.style.opacity = ""
-
-                            description.innerText = value
-                            nextDescription.innerText = ""
-
-                            setTimeout(() => {
-                                description.style.transitionDuration = ""
-                                nextDescription.style.transitionDuration = ""
-                            }, 500)
-                        }
-
-                        function startDescriptionAnimation(nextValue) {
-                            nextDescription.innerText = nextValue
-                            description.style.transform = "translateY(50px)"
-                            description.style.opacity = "0"
-                            nextDescription.style.transform = "initial"
-                            nextDescription.style.opacity = "1"
-
-                            if (window.innerWidth >= 640) {
-                                translateDescriptionX();
-                            }
-
-                            setTimeout(() => {
-                                finishDescriptionAnimation(nextValue);
-                            }, 500)
-                        }
-
-                        function translateDescriptionX() {
-                            const currentWidth = description.offsetWidth;
-                            const nextWidth = nextDescription.offsetWidth;
-                            const diff = currentWidth - nextWidth;
-
-                            let currentOffset = parseFloat(descriptionText.style.left);
-                            const newOffset = currentOffset + diff / 2;
-
-                            function nextFrame() {
-                                currentOffset = parseFloat(descriptionText.style.left);
-                                const thisFrameDelta = diff > 0 ? 0.25 : -0.25
-                                descriptionText.style.left = (currentOffset + thisFrameDelta) + "px";
-                                if (Math.abs(newOffset - currentOffset) > 1) {
-                                    requestAnimationFrame(() => {
-                                        nextFrame();
-                                    })
-                                }
-                            }
-
-                            requestAnimationFrame(() => {
-                                nextFrame()
-                            })
-                        }
-
-                        addEventListener("resize", () => {
-                            setTimeout(() => {
-                                calibrateDescriptionOffset();
-                            }, 0)
-                        })
-                        calibrateDescriptionOffset();
-
-                        setInterval(() => {
-                            const nextDescriptionIndex = ++currentDescriptionIdx % descriptions.length
-                            startDescriptionAnimation(descriptions[nextDescriptionIndex])
-                        }, 5000)
-                    }
-
-                    let fontsLoaded = false;
-                    let domLoaded = false;
-                    document.fonts.ready.then(() => {
-                        fontsLoaded = true;
-                        if (domLoaded) {
-                            initDescriptionAnimation()
-                        }
-                    })
-                    document.addEventListener("DOMContentLoaded", () => {
-                        domLoaded = true;
-                        if (fontsLoaded) {
-                            initDescriptionAnimation();
-                        }
-                    })
                 </script>
             `}
             <div style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/static/images/hero-bg/hero-bg.png');
@@ -154,19 +40,8 @@ export function Hero() {
                                  onError="this.parentElement.innerHTML = 'Quickplay'" width="1534" height="375" />
                         </picture>
                     </div>
-                    <p class="text-2xl py-2" style="font-family: Merriweather; text-align: center" id="hero-description-line">
 
-                       <span class="relative flex flex-col items-center sm:inline" aria-hidden="true">
-                            Hypixel Navigation for&nbsp;
-
-                           <span class="inline-block sm:inline">
-                                <span id="hero-description-next-word"
-                                      class="absolute transition duration-500 inline-block translate-y-[-50px] text-nowrap opacity-0 w-[100vw] left-0 text-center sm:left-[initial] sm:text-left sm:w-[initial]"></span>
-                                <span id="hero-description-word" class="relative transition duration-500 inline-block">Experts</span>
-                            </span>
-                       </span>
-                       <span class="sr-only">Hypixel Navigation for Experts</span>
-                    </p>
+                    <ScrollingDescription />
 
                     <div class="flex justify-center z-10 relative">
                         <a href="#downloads" onclick="scrollToDownloads(event)" class="p-5 pl-16 pr-16 bg-teal-600 rounded-md m-2 text-3xl button-link">

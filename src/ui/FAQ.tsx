@@ -19,7 +19,7 @@ export function FAQ() {
 
             <h3 class="text-white text-xl">Quickplay says I'm not connected to Hypixel, but I am. What gives?</h3>
             <p class="text-white mb-7">Quickplay detects when you are connected to Hypixel using the
-                <span class="italic">server address</span>. Make sure you are connected through an official Hypixel
+                server address. Make sure you are connected through an official Hypixel
                 server address, such as mc.hypixel.net. Connecting through a third-party proxy is not recommended. If
                 you must add your own server address to the list of recognized addresses, edit the "customAddressRegex"
                 field in the config/quickplay/hypixel.json file within your Minecraft installation folder.

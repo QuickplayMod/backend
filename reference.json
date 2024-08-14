@@ -1,0 +1,9 @@
+{
+  "v1": {
+    "health": "https://quickplay.ecr.dev/api/v1/health",
+    "games": "https://quickplay.ecr.dev/api/v1/games",
+    "gamesSchema": "https://quickplay.ecr.dev/api/v1/gamesSchema",
+    "reward": "https://quickplay.ecr.dev/api/v1/reward",
+    "reward/claim": "https://quickplay.ecr.dev/api/v1/reward/claim"
+  }
+}

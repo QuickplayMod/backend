@@ -11,6 +11,10 @@ app.get('/health', (c) => {
     })
 })
 
+app.get('/reference', (c) => {
+    return c.json(reference)
+})
+
 app.get('/games', (c) => {
     return c.json(games)
 })

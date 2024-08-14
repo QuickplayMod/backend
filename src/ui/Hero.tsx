@@ -44,7 +44,7 @@ export function Hero() {
                     <ScrollingDescription />
 
                     <div class="flex justify-center z-10 relative">
-                        <a href="#downloads" onclick="scrollToDownloads(event)" class="p-5 pl-16 pr-16 bg-teal-600 rounded-md m-2 text-3xl button-link">
+                        <a href="#downloads" onclick="scrollToDownloads(event)" class="p-5 pl-16 pr-16 bg-teal-600 rounded-md m-2 text-3xl button-link hover:bg-[#0eae9f] transition-colors duration-150">
                             Download
                         </a>
                     </div>
@@ -60,10 +60,10 @@ export function Hero() {
 
 
                     <div class="flex justify-center mt-5">
-                        <a href="https://discord.gg/AWThmaVJJv" class="p-3 px-5 bg-[#5865F2] rounded-md m-2 text-xl button-link">
+                        <a href="https://discord.gg/AWThmaVJJv" class="p-3 px-5 bg-[#5865F2] rounded-md m-2 text-xl button-link hover:bg-[#6f7af2] transition-colors duration-150">
                             Discord
                         </a>
-                        <a href="https://github.com/quickplaymod" class="p-3 px-5 bg-[#2B3137] rounded-md m-2 text-xl button-link">
+                        <a href="https://github.com/quickplaymod" class="p-3 px-5 bg-[#2B3137] rounded-md m-2 text-xl button-link hover:bg-[#394046] transition-colors duration-150">
                             GitHub
                         </a>
                     </div>

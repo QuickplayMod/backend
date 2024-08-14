@@ -36,9 +36,9 @@ export function FAQ() {
                 designed
                 to be a general-purpose macro mod, so you cannot add commands for other servers yourself. If there is a
                 server that you think should be added to Quickplay, reach out
-                on <a class="underline text-teal-500" href="https://discord.gg/AWThmaVJJv">Discord</a>. You are also
+                on <a class="underline text-teal-500 hover:text-teal-400" href="https://discord.gg/AWThmaVJJv">Discord</a>. You are also
                 welcome
-                to fork the <a class="underline text-teal-500" href="https://github.com/quickplaymod">GitHub
+                to fork the <a class="underline text-teal-500 hover:text-teal-400" href="https://github.com/quickplaymod">GitHub
                     repositories</a> to
                 create your own version of Quickplay.
             </p>

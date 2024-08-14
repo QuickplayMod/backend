@@ -172,9 +172,12 @@
             "items": {
               "$ref": "#/$defs/Folder"
             }
+          },
+          "enabled":  {
+            "type": "boolean"
           }
         },
-        "required": ["addressRegex", "games"],
+        "required": ["addressRegex", "games", "enabled"],
         "additionalProperties": false
       }
     }

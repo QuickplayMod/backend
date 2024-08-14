@@ -4,7 +4,8 @@
       "addressRegex": ".*",
       "games": [
 
-      ]
+      ],
+      "enabled": true
     }
   ],
   "conditions": {

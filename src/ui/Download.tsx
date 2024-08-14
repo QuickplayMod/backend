@@ -35,12 +35,17 @@ export function Download() {
                         style="display: none">
                         1.21 Fabric (Direct)
                     </a>
+                    <a href="https://github.com/QuickplayMod/quickplay/releases"
+                        class="p-3 bg-teal-700 rounded-md m-2 text-xl text-white additional-dl-option button-link col-span-2"
+                        style="display: none">
+                        Other Versions
+                    </a>
                 </div>
 
                 <div class="text-center">
                     <button class="text-gray-400 underline mt-5"
                             onclick="showAdditionalDownloads(this)">
-                        Show Direct Downloads
+                        Show More Downloads
                     </button>
                 </div>
             </div>

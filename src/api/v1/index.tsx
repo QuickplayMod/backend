@@ -1,6 +1,7 @@
 import {Hono} from 'hono'
 import games from './games.json'
 import gamesSchema from './games.schema.json'
+import reference from '../../../reference.json'
 
 const app = new Hono()
 
@@ -15,6 +16,20 @@ app.get('/games', (c) => {
 })
 app.get('/gamesSchema', (c) => {
     return c.json(gamesSchema)
+})
+
+app.get('/reward', (c) => {
+    c.status(501);
+    return c.json({
+        error: "Not implemented"
+    })
+})
+
+app.get('/reward/claim', (c) => {
+    c.status(501);
+    return c.json({
+        error: "Not implemented"
+    })
 })
 
 app.get('*', (c) => {

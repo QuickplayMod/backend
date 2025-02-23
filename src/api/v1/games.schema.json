@@ -61,29 +61,36 @@
         "additionalProperties": false
       },
       "Sequence": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "unlocalizedName": {
-              "type": "string"
-            },
-            "if": {
-              "$ref": "#/$defs/ConditionStatement"
-            },
-            "action": {
-              "$ref": "#/$defs/Action"
-            },
-            "else": {
-              "$ref": "#/$defs/Action"
-            }
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
           },
-          "required": ["action", "name"],
-          "additionalProperties": false
-        }
+          "unlocalizedName": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "if": {
+                  "$ref": "#/$defs/ConditionStatement"
+                },
+                "action": {
+                  "$ref": "#/$defs/Action"
+                },
+                "else": {
+                  "$ref": "#/$defs/Action"
+                }
+              },
+              "required": ["action"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["name", "steps"],
+        "additionalProperties": false
       },
       "Condition": {
         "type": "object",

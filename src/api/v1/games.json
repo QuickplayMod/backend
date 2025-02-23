@@ -2,9 +2,27 @@
   "$schema": "./games.schema.json",
   "servers": [
     {
-      "addressRegex": ".*",
+      "addressRegex": "(?:.*)?\\.hypixel\\.net(?::\\d{1,5})?",
       "games": [
-
+        {
+          "name": "Main Lobby",
+          "unlocalizedName": "mainLobby",
+          "image": "https://quickplay.ecr.dev/static/images/games/platform-pc-256.png",
+          "children": [
+            {
+              "name": "Go to Lobby",
+              "unlocalizedName": "goToLobby",
+              "steps": [
+                {
+                  "action": {
+                    "type": "command",
+                    "value": "l main"
+                  }
+                }
+              ]
+            }
+          ]
+        }
       ],
       "enabled": true
     }

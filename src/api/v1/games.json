@@ -1,4 +1,5 @@
 {
+  "$schema": "./games.schema.json",
   "servers": [
     {
       "addressRegex": ".*",

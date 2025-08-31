@@ -6,20 +6,22 @@
       "games": [
         {
           "name": "Main Lobby",
-          "unlocalizedName": "mainLobby",
+          "identifier": "mainLobby",
           "image": "https://quickplay.ecr.dev/static/images/games/platform-pc-256.png",
           "children": [
             {
               "name": "Go to Lobby",
-              "unlocalizedName": "goToLobby",
-              "steps": [
-                {
-                  "action": {
-                    "type": "command",
-                    "value": "l main"
+              "identifier": "goToMainLobby",
+              "children": {
+                "steps": [
+                  {
+                    "action": {
+                      "type": "command",
+                      "value": "l main"
+                    }
                   }
-                }
-              ]
+                ]
+              }
             }
           ]
         }

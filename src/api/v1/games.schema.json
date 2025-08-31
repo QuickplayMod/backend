@@ -31,10 +31,13 @@
           "if": {
             "$ref": "#/$defs/ConditionStatement"
           },
+          "elseMessage": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
-          "unlocalizedName": {
+          "identifier": {
             "type": "string"
           },
           "image": {
@@ -49,26 +52,17 @@
                 }
               },
               {
-                "type": "array",
-                "items": {
-                  "$ref": "#/$defs/Sequence"
-                }
+                "$ref": "#/$defs/Sequence"
               }
             ]
           }
         },
-        "required": ["name", "children"],
+        "required": ["name", "children", "identifier"],
         "additionalProperties": false
       },
       "Sequence": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "unlocalizedName": {
-            "type": "string"
-          },
           "steps": {
             "type": "array",
             "items": {
@@ -140,6 +134,9 @@
         "properties": {
           "ref": {
             "type": "string"
+          },
+          "invert": {
+            "type": "boolean"
           }
         },
         "required": ["ref"],
